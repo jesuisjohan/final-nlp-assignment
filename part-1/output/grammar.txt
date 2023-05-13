@@ -6,14 +6,6 @@ N,bạn|em|ngày|phương tiện|tour
 Np,Hồ Chí Minh|Nha Trang|Phú Quốc|Đà Nẵng
 P,bao lâu|bao nhiêu|gì|nào|tất cả|vậy
 R,có thể|không|được
-S,N|V
-S_E,N|Np
-S_L,N
-S_N,CH|Np|P|R|V
-S_Np,E|P|V
-S_P,CH|L|N|T
-S_R,CH|R|V
-S_T,CH
-S_V,E|L|Np|P|V
+S,N|V|N R V P N V T|V E Np T E Np P L N T|V E Np T E Np P N|V P N V Np T|Np V E N V T|V Np P L N T
 T,nhỉ|vậy
 V,có|hết|lại|nhắc|đi
