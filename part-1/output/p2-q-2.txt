@@ -1,0 +1,27 @@
+Câu hỏi: Tàu hỏa nào đến thành phố Phú Quốc lúc 19:00HR ?
+
+** Dependencies **
+"tàu_hoả" --query-> "nào"
+"đến" --subj-> "tàu_hoả"
+"ROOT" --root-> "đến"
+"phú_quốc" --nmod-> "thành_phố"
+"đến" --dobj-> "phú_quốc"
+"đến" --pp-> "lúc"
+"19:00hr" --timemod-> "lúc"
+"đến" --time-> "19:00hr"
+"đến" --punc-> "?"
+
+** Grammar Relations **
+(s1 QUERY tàu_hoả)
+(s1 TRAIN tàu_hoả)
+(s1 PRED đến)
+(s1 THEME (NAME h1 phú_quốc))
+(s1 AT-TIME 19:00hr)
+
+** Logical Form **
+(WH-QUERY  (đến s1 (TRAIN  (WHICH  tàu_hoả)) (THEME  (NAME h1 phú_quốc)) (AT-TIME  19:00hr)))
+
+** Procedure **
+(PRINT-ALL ?x (TRAIN ?x) (ATIME ?x PQ 19:00HR))
+
+Trả lời: B1.
