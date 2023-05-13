@@ -1,0 +1,11 @@
+Rule,Expansion
+CH,?
+E,bằng|tới|từ
+L,các|những
+N,bạn|em|ngày|phương tiện|tour
+Np,Hồ Chí Minh|Nha Trang|Phú Quốc|Đà Nẵng
+P,bao lâu|bao nhiêu|gì|nào|tất cả|vậy
+R,có thể|không|được
+S,N|V
+T,nhỉ|vậy
+V,có|hết|lại|nhắc|đi
