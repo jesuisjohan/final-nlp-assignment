@@ -7,15 +7,13 @@ import csv
 def create_grammar_rules(tagged_sentences: List[List[Tuple[str, str]]]) -> Dict[str, Set[str]]:
     rules: defaultdict[str, Set[str]] = defaultdict(set)
 
+    # Add new S rules
+    rules["S"].update({"N", "V", "N R V P N V T", "V E Np T E Np P L N T", "V E Np T E Np P N", "V P N V Np T", "Np V E N V T", "V Np P L N T"})
+
     for sentence in tagged_sentences:
         for i, (word, tag) in enumerate(sentence):
             if i == 0:
                 rules["S"].add(tag)
-            elif i < len(sentence) - 1:
-                prev_word, prev_tag = sentence[i - 1]
-                next_word, next_tag = sentence[i + 1]
-                rules[f"S_{prev_tag}"].add(tag)
-                rules[f"S_{tag}"].add(next_tag)
             rules[tag].add(word)
 
     return rules
