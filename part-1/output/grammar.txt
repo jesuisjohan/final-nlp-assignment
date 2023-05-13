@@ -7,5 +7,13 @@ Np,Hồ Chí Minh|Nha Trang|Phú Quốc|Đà Nẵng
 P,bao lâu|bao nhiêu|gì|nào|tất cả|vậy
 R,có thể|không|được
 S,N|V
+S_E,N|Np
+S_L,N
+S_N,CH|Np|P|R|V
+S_Np,E|P|V
+S_P,CH|L|N|T
+S_R,CH|R|V
+S_T,CH
+S_V,E|L|Np|P|V
 T,nhỉ|vậy
 V,có|hết|lại|nhắc|đi

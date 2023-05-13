@@ -11,6 +11,11 @@ def create_grammar_rules(tagged_sentences: List[List[Tuple[str, str]]]) -> Dict[
         for i, (word, tag) in enumerate(sentence):
             if i == 0:
                 rules["S"].add(tag)
+            elif i < len(sentence) - 1:
+                prev_word, prev_tag = sentence[i - 1]
+                next_word, next_tag = sentence[i + 1]
+                rules[f"S_{prev_tag}"].add(tag)
+                rules[f"S_{tag}"].add(next_tag)
             rules[tag].add(word)
 
     return rules
@@ -39,4 +44,5 @@ for p in paragraphs:
 
 tagged_sentences: List[List[Tuple[str, str]]] = [pos_tag(sentence) for sentence in sentences]
 grammar_rules: Dict[str, Set[str]] = create_grammar_rules(tagged_sentences)
+
 write_grammar_rules_to_file(grammar_rules, "../output/grammar.txt")
